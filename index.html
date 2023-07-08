@@ -7,7 +7,33 @@
   <title>JavaScript Lab</title>
 </head>
 <body>
-  hello
-  <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript">
+    // Function to return a String for Saturday activity
+    function saturdayFun(activity = "roller-skate") {
+      return `This Saturday, I want to ${activity}!`;
+    }
+
+    console.log(saturdayFun()); // This Saturday, I want to roller-skate!
+    console.log(saturdayFun("paint")); // This Saturday, I want to paint!
+
+    // Function to return a String for Monday work
+    function mondayWork(activity = "go to the office") {
+      return `This Monday, I will ${activity}.`;
+    }
+
+    console.log(mondayWork()); // This Monday, I will go to the office.
+    console.log(mondayWork("code")); // This Monday, I will code.
+
+    // Function to return a function with visual flair
+    function wrapAdjective(flair = "*") {
+      return function (adjective = "special") {
+        return `You are ${flair}${adjective}${flair}!`;
+      };
+    }
+
+    const encouragingPromptFunction = wrapAdjective("!!!");
+    console.log(encouragingPromptFunction("awesome")); // You are !!!awesome!!!
+    console.log(wrapAdjective("%")("a dedicated programmer")); // You are %a dedicated programmer%!
+  </script>
 </body>
 </html>
